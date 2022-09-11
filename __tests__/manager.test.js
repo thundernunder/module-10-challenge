@@ -1,6 +1,6 @@
-const Intern = require('../lib/manager');
+const Manager = require('../lib/manager.js');
 
-describe("Manger"), () => {
+describe("Manager", () => {
     it("Should create new Manager object", () => {
         const manager = new Manager('Nathan', 1, 'nathanrolandpotter@yahoo.com');
 
@@ -12,8 +12,7 @@ describe("Manger"), () => {
             const manager = new Manager('Nathan', 1, 'nathanrolandpotter@yahoo.com');
 
             expect(manager.getOfficeNumber().not.toBeNull());
-        })
-        
+        })  
     });
 
     describe('Get employee role', () => {
@@ -23,4 +22,4 @@ describe("Manger"), () => {
             expect(manager.getRole()).toEqual("Manager");
         });
     });
-}
+});
