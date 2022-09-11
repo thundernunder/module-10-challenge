@@ -24,8 +24,10 @@
     "url": "https://github.com/thundernunder/module-10-challenge/issues"
   },
   "homepage": "https://github.com/thundernunder/module-10-challenge#readme",
-  
   "devDependencies": {
     "jest": "^24.9.0"
+  },
+  "dependencies": {
+    "inquirer": "^8.2.4"
   }
 }
