@@ -1,17 +1,17 @@
 const Intern = require('../lib/intern');
 
-describe("Intern"), () => {
+describe("Intern", () => {
     it("Should create new Inter object", () => {
-        const intern = new Intern('Nathan', 1, 'nathanrolandpotter@yahoo.com');
+        const intern = new Intern('Nathan', 1, 'nathanrolandpotter@yahoo.com', 'cool school');
 
-        expect(intern.getSchool().not.toBeNull());
+        expect(intern.school).not.toBeNull();
     });
 
     describe("Intern School", () => {
         it("Should get Intern School from getSchool()", () => {
-            const intern = new Intern('Nathan', 1, 'nathanrolandpotter@yahoo.com');
+            const intern = new Intern('Nathan', 1, 'nathanrolandpotter@yahoo.com', 'cool school');
 
-            expect(intern.getSchool().not.toBeNull());
+            expect(intern.getSchool()).toEqual(expect.any(String));
         })
         
     });
@@ -23,4 +23,4 @@ describe("Intern"), () => {
             expect(intern.getRole()).toEqual("Intern");
         });
     });
-}
+});
