@@ -25,7 +25,7 @@ const addEmployee = () => {
                 if (nameInput) {
                     return true;
                 } else {
-                    console.log ("Please enter an employee's name!");
+                    console.log ("Please enter a valid name.");
                     return false; 
                 }
             }
@@ -36,7 +36,7 @@ const addEmployee = () => {
             message: "Please enter the employee's ID.",
             validate: nameInput => {
                 if  (isNaN(nameInput)) {
-                    console.log ("Please enter the employee's ID!")
+                    console.log ("Please enter a valid ID.")
                     return false; 
                 } else {
                     return true;
@@ -52,7 +52,7 @@ const addEmployee = () => {
                 if (valid) {
                     return true;
                 } else {
-                    console.log ('Please enter an email!')
+                    console.log ('Please enter a valid email.')
                     return false; 
                 }
             }
@@ -66,7 +66,7 @@ const addEmployee = () => {
                 if (nameInput ) {
                     return true;
                 } else {
-                    console.log ("Please enter the employee's github username!")
+                    console.log ("Please enter a valid GitHub username.")
                 }
             }
         },
@@ -79,7 +79,7 @@ const addEmployee = () => {
                 if (nameInput) {
                     return true;
                 } else {
-                    console.log ("Please enter the intern's school!")
+                    console.log ("Please enter a valid school.")
                 }
             }
         },
@@ -90,7 +90,7 @@ const addEmployee = () => {
             when: (input) => input.role === "Manager",
             validate: nameInput => {
                 if  (isNaN(nameInput)) {
-                    console.log ('Please enter an office number!')
+                    console.log ('Please enter a valid office number.')
                     return false; 
                 } else {
                     return true;
@@ -105,7 +105,7 @@ const addEmployee = () => {
         }
     ])
     .then(employeeData => {
-        // data for employee types 
+        // use data to fill role profiles
 
         let { name, id, email, role, github, school, officeNumber, confirmAddEmployee } = employeeData; 
         let employee; 
@@ -139,11 +139,10 @@ const addEmployee = () => {
 
 const writeFile = data => {
     fs.writeFile('./dist/index.html', data, err => {
-        // error
         if (err) {
             console.log(err);
             return;
-        // if profile created successfully
+        // index.html profile page created successfully
         } else {
             console.log("Your team profile has been created. View index.html")
         }

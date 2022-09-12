@@ -1,11 +1,11 @@
-// create Manager card
+// Manager
 const generateManager = function (manager) {
     return `
     <div class="col-6 md-12 profile-card">
         <div class="card h-100">
             <div class="card-header">
                 <h3>${manager.name}</h3>
-                <h4>Manager</h4>
+                <h4>Manager<i class="material-icons">star</i></h4>
             </div>
             <div class="card-body">
                 <p class="id">ID: ${manager.id}</p>
@@ -17,14 +17,14 @@ const generateManager = function (manager) {
     `;
 }
 
-// create Engineer card
+// Engineer 
 const generateEngineer = function (engineer) {
     return `
     <div class="col-4 md-6 profile-card">
         <div class="card h-100">
             <div class="card-header">
-                <h3>${engineer.name}<i class="material-icons">star</i></h3>
-                <h4>Engineer</h4>
+                <h3>${engineer.name}</h3>
+                <h4>Engineer<i class="material-icons">code</i></h4>
             </div>
             <div class="card-body">
                 <p class="id">ID: ${engineer.id}</p>
@@ -36,14 +36,14 @@ const generateEngineer = function (engineer) {
     `
 }
 
-// create Intern card 
+//Intern
 const generateIntern = function (intern) {
     return `
     <div class="col-4 md-6 profile-card">
         <div class="card h-100">
             <div class="card-header">
                 <h3>${intern.name}</h3>
-                <h4>Intern</h4>
+                <h4>Intern<i class="material-icons">assistant</i></h4>
             </div>
             <div class="card-body">
                 <p class="id">ID: ${intern.id}</p>
@@ -57,8 +57,6 @@ const generateIntern = function (intern) {
 
 // push array to page 
 generateHTML = (data) => {
-
-    // array for cards 
     pageArray = []; 
 
     for (let i = 0; i < data.length; i++) {
@@ -66,21 +64,21 @@ generateHTML = (data) => {
         const role = employee.getRole(); 
 
 
-        // call manager function
+        // generate Manager card if role is Manager
         if (role === 'Manager') {
             const managerCard = generateManager(employee);
 
             pageArray.push(managerCard);
         }
 
-        // call engineer function
+        // generate Engineer card if role is Engineer
         if (role === 'Engineer') {
             const engineerCard = generateEngineer(employee);
 
             pageArray.push(engineerCard);
         }
 
-        // call intern function 
+        // generate Intern card if role is Intern 
         if (role === 'Intern') {
             const internCard = generateIntern(employee);
 
@@ -89,10 +87,9 @@ generateHTML = (data) => {
         
     }
 
-    // joining strings 
     const employeeCards = pageArray.join('')
 
-    // return to generated page
+    // return to start of generate cycle
     const generateTeam = generateTeamPage(employeeCards); 
     return generateTeam;
 
@@ -124,7 +121,6 @@ const generateTeamPage = function (employeeCards) {
     <main>
         <div class="container">
             <div class="row justify-content-center" id="team-cards">
-                <!--Team Cards-->
                 ${employeeCards}
             </div>
         </div>
