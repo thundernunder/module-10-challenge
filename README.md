@@ -25,6 +25,7 @@ There are separate test files for each role in order to confirm their functional
 
 Video Walkthrough
 
+Area Screenshot
 
 Questions
 Have questions about this project?
