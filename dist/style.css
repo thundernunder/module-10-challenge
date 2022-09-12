@@ -1,0 +1,17 @@
+body {
+    font-family: "Karla", "Rubik";
+}
+
+.profile-card {
+    margin: 8px auto;
+}
+
+.card-header {
+    background-color: rgb(142, 142, 161);
+    color: white
+};
+
+.card-header-container{
+    display: flex;
+;}
+
