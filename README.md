@@ -1,4 +1,4 @@
-Nathan's README Generator
+Team Profile Generator
 
 Table of Contents
 * [Description](#description)
