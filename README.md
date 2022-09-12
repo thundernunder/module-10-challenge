@@ -25,7 +25,14 @@ There are separate test files for each role in order to confirm their functional
 
 Video Walkthrough
 
+https://user-images.githubusercontent.com/98553537/189718960-f0b081aa-78f6-4758-9983-a1103dc2d7af.mp4
+
+Pass Tests
+https://user-images.githubusercontent.com/98553537/189718345-14a68a81-76ea-48af-b499-b381111ca141.mp4
+
+
 Area Screenshot
+![screenshot-profile-icons](https://user-images.githubusercontent.com/98553537/189718372-ae123948-4825-4de6-8ebf-08bf8937fa5f.png)
 
 Questions
 Have questions about this project?
