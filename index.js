@@ -6,6 +6,8 @@ const Manager = require('./lib/manager');
 const Engineer = require('./lib/engineer');
 const Intern = require('./lib/intern'); 
 
+const teamArray = [];
+
 const addEmployee = () => {
     
     return inquirer.prompt ([
@@ -147,5 +149,16 @@ const writeFile = data => {
         }
     })
 }; 
+
+addEmployee()
+  .then(teamArray => {
+    return generateHTML(teamArray);
+  })
+  .then(pageHTML => {
+    return writeFile(pageHTML);
+  })
+  .catch(err => {
+ console.log(err);
+  });
 
  
