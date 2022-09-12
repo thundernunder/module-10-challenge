@@ -86,7 +86,7 @@ const addEmployee = () => {
         {
             type: 'input',
             name: 'officeNumber',
-            message: "Please enter the manager's office number",
+            message: "Please enter the manager's office number.",
             when: (input) => input.role === "Manager",
             validate: nameInput => {
                 if  (isNaN(nameInput)) {
@@ -107,7 +107,7 @@ const addEmployee = () => {
     .then(employeeData => {
         // data for employee types 
 
-        let { name, id, email, role, github, school, confirmAddEmployee } = employeeData; 
+        let { name, id, email, role, github, school, officeNumber, confirmAddEmployee } = employeeData; 
         let employee; 
 
         if (role === "Engineer") {
