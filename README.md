@@ -15,7 +15,7 @@ Installation
 Make sure to have GitBash, Node.js, and VSCode installed for sucess. Further installations would be to install Node packages Jest and Inquirer. 
 
 Useage
-The user launches the application by inputting the commage 'node index.js' into the command line. Then the user is guided through the profile generation process by a series of prompts, having the choices to add 'Manager', 'Engineer', and 'Intern' employees. Once satisfied with the amount of profiles created, an Index.html file is generated utilizing the user's input.  
+The user launches the application by inputting the commage 'node index.js' into the command line. Then the user is guided through the profile generation process by a series of prompts, having the choices to add 'Manager', 'Engineer', and 'Intern' employees. Once satisfied with the amount of profiles created, an Index.html file is generated in the './dist' folder utilizing the user's input.  
 
 Contributing
 Feel free to message me if you have any ideas on how to make this better!
